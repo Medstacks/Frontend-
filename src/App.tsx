@@ -1,10 +1,9 @@
 import './App.css'
-
+import Homepage from './components/home'
 function App() {
-
   return (
-    <HomePage/>
+    <Homepage/>
   )
 }
 
-export default App
+export default App;
