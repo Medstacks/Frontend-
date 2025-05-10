@@ -1,6 +1,7 @@
 import "../../App.css"
 import { useAuth } from "../../hooks/authContext";
 import { useState } from 'react';
+import AuthModal from "../home/authModal";
 
 export default function Navbar() { 
     const { isAuthenticated, logout } = useAuth();
