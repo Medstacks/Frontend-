@@ -21,7 +21,7 @@ export default function Navbar() {
             </article>
             <button onClick={handleAuth}>{isAuthenticated ? "Log out" : 'Sign in'}</button>
             { 
-                isShowingModal && <AuthModal/>
+                isShowingModal && <AuthModal onClose={() => {showingModal(!isShowingModal)}}/>
             }
         </nav>
     )

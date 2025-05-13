@@ -62,7 +62,7 @@ button {
   cursor:pointer;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #07c52a;
 }
 button:focus,
 button:focus-visible {

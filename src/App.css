@@ -11,5 +11,23 @@ button{
   font-weight: bold;
   font-size:0.75rem;
   height:30px;
-  @apply transform transition duration-500 text-green-500 bg-black hover:scale-[1.07] duration-400;
+  @apply transform transition duration-500 text-green-500 bg-black hover:scale-[1.03] duration-400;
+}
+.sectionBody{
+  @apply px-[10px] flex flex-col gap-[20px];
+  & input{
+    width:100%;
+    border: solid 1px rgb(132, 130, 130);
+    padding:10px;
+    height:30px;
+    @apply rounded; 
+  }
+  & form{
+    display: flex;
+    margin: 20px 1px;
+    flex-direction: column;
+    gap: 10px;
+    padding:10px 0;
+  }
+  
 }
