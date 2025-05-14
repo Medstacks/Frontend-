@@ -2,59 +2,78 @@
 #root {
   margin: 0 auto;
   text-align: center;
-  padding:0;
+  padding: 0;
 }
-button{
-  display:flex;
+button {
+  display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size:0.75rem;
-  height:30px;
+  font-size: 0.75rem;
+  height: 30px;
   @apply transform transition duration-500 text-green-500 bg-black hover:scale-[1.03] duration-400;
 }
-.sectionBody{
+.sectionBody {
   @apply px-[10px] flex flex-col gap-[20px];
-  & input{
-    width:100%;
+  & input {
+    width: 100%;
     border: solid 1px rgb(132, 130, 130);
-    padding:10px;
-    height:30px;
-    @apply rounded; 
+    padding: 10px;
+    height: 30px;
+    @apply rounded;
   }
-  & form{
+  & form {
     display: flex;
     margin: 20px 1px;
     flex-direction: column;
     gap: 10px;
-    padding:10px 0;
+    padding: 10px 0;
   }
-  
 }
-.contact{
+.contact {
   @apply bg-black text-white py-[20px] px-[20px] flex flex-col justify-center gap-3 items-center w-full md:w-[40%];
-   & main{
+  & main {
     @apply bg-white text-black rounded p-3 text-center;
-    & section{
-      display:flex;
-      gap:10px;
+    & section {
+      display: flex;
+      gap: 10px;
       flex-direction: column;
       @apply sm:px-[20px] py-[30px];
     }
-   }
-   & footer{
-    display:flex;
+  }
+  & footer {
+    display: flex;
     @apply justify-center items-center;
-    & button{
-      width:100px;
-      padding:10px 5px;
+    & button {
+      width: 100px;
+      padding: 10px 5px;
       @apply bg-white hover:bg-gray-400 text-black;
     }
-   }
-   & input{
+  }
+  & input {
     @apply w-[100%] h-[30px] p-1 bg-white text-gray-700 my-2 border-0 outline-0;
-   }
-   & textarea{
+  }
+  & textarea {
     @apply resize-none  w-[100%] p-1 bg-white text-gray-700 my-2 border-0 outline-0;
-   }
+  }
+}
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-inline:10px;
+  color: white;
+
+  & h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: Admiral, Gothic;
+  }
+  & p {
+    font-size: 0.75rem;
+    font-weight: 500;
+    @apply cursor-pointer hover:underline;
+  }
+  @apply text-start;
+
 }
