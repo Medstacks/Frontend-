@@ -11,7 +11,7 @@ export default function AuthModal({ onClose }: { onClose: () => void }) {
     }, [isSigningIn])
     return (
         <div className="fixed inset-0 z-20 flex justify-center items-center">
-            <aside className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}></aside>
+            {/* <aside className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}></aside> */}
             <main className="relative z-20 w-[90%] max-w-[350px] bg-white rounded-lg shadow-lg p-2">
                 <header className='flex justify-between w-full pl-[10px] items-center'>
                     <p style={{fontSize:'1.2rem'}} className='font-[600] py-[10px]'>{!isSigningIn ? 'Create Your Account' : 'Welcome Back'}</p>
