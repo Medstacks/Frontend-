@@ -11,26 +11,26 @@ export default function FAQ() {
         {
             question: "How does Agrolink reduce post-harvest losses?",
             answer:
-                "Agrolink provides real-time data analytics, smart planning tools, and local preservation techniques tailored to your specific crops and region. Our platform connects farmers to shared logistics resources, reducing transportation costs and delays.",
+                " Provides real-time data, smart planning, local preservation techniques, and connects farmers to shared logistics.",
         },
         {
             question: "Can small-scale farmers benefit from Agrolink?",
             answer:
-                "Absolutely! Agrolink is specifically designed with smallholder farmers in mind. Our platform scales to your needs and provides affordable solutions that directly address the challenges faced by small-scale farming operations.",
+                "Yes, it's specifically designed for smallholder farmers with scalable and affordable solutions",
         },
         {
             question: "What kind of data does Agrolink collect?",
             answer:
-                "Agrolink collects crop data, harvest timing, local market conditions, storage availability, transportation options, and weather forecasts - all essential information to optimize your post-harvest outcomes.",
+                " Crop data, harvest timing, market conditions, storage, transportation, and weather forecasts.",
         },
         {
             question: "Is training provided for new users?",
             answer:
-                "Yes, we offer comprehensive onboarding and training sessions for all new users. Our team provides ongoing support to ensure you get the most value from our platform.",
+                "Yes, comprehensive onboarding, training, and ongoing support are offered.",
         },
     ];
     return (
-         <section className="w-full md:w-1/2 mx-auto py-4 px-4 md:px-6 h-[300px]">
+         <section className="w-full md:w-1/2 mx-auto py-4 px-4 md:px-6 md:h-[300px] transition transform duration-400">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -61,10 +61,10 @@ export default function FAQ() {
                             value={`item-${index}`}
                             className="border-b border-gray-200"
                         >
-                            <AccordionTrigger className="text-left text-brandBlack hover:text-brandGreen transition-colors py-[20px]">
+                            <AccordionTrigger className="text-left text-gray-200">
                                 {faq.question}
                             </AccordionTrigger>
-                            <AccordionContent className="text-gray-600 shadow-md">
+                            <AccordionContent className="text-gray-700 shadow-md w-full">
                                 {faq.answer}
                             </AccordionContent>
                         </AccordionItem>

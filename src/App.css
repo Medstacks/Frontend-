@@ -61,7 +61,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding-inline:10px;
+  padding-inline: 10px;
   color: white;
 
   & h6 {
@@ -75,5 +75,37 @@ button {
     @apply cursor-pointer hover:underline;
   }
   @apply text-start;
+}
 
+.growthCard{
+  display:flex;
+  gap:15px;
+  @apply shadow-md rounded py-2 px-[10px] sm:px-[20px] md:flex-row flex-col justify-center items-center;
+  &  main{
+    @apply md:p-[40px] p-[20px]
+  }
+  & article{
+    padding-block: 30px 0;
+    display :flex ;
+    gap:15px;
+    
+    & p{
+      @apply text-black flex gap-[3px] items-center rounded;
+      font-size: 0.8rem;
+      padding: 5px 10px;
+      border: 1px solid #b5b3b3;
+      font-family:sans-serif, Admiral;
+    }
+  }
+
+  & h5{
+    font-family:sans-serif, Admiral;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align:start;
+    @apply max-w-[500px] w-[80%] py-4;
+  }
+  & button{
+    @apply w-[170px] h-[30px] text-nowrap text-center text-white;
+  }
 }

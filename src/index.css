@@ -22,8 +22,8 @@ a:hover {
 body {
   margin: 0;
   padding:0;
-  min-width: 100dvw;
-  min-height: 100dvh;
+  /* min-width: 100dvw; */
+  /* min-height: 100dvh; */
   font-family: 'Dm sans', sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 h1 {

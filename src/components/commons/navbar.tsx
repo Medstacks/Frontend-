@@ -14,12 +14,12 @@ export default function Navbar() {
         showingModal(true)
     }
     return (
-        <nav className={'flex justify-between items-center px-3 md:px-4 py-2'}>
-            <article className="w-auto h-[30px] flex gap-1 justify-center items-center cursor-pointer">
+        <nav className={'flex justify-between items-center px-2 md:px-4 py-2'}>
+            <article className="w-auto max-w-[150px] text-nowrap h-[30px] flex gap-1 justify-center items-center cursor-pointer">
                 <img src="/favicons/favicon.svg" loading="lazy" alt="logo" className={'object-contain w-full h-full'} />
-                <h6 style={{fontWeight:'600'}}>Agrolink</h6>
+                <h6 style={{fontWeight:'600',fontFamily:'Admiral, san-serif'}}>Agrolink</h6>
             </article>
-            <button onClick={handleAuth}>{isAuthenticated ? "Log out" : 'Sign in'}</button>
+            <button onClick={handleAuth} className='text-nowrap'>{isAuthenticated ? "Log out" : 'Sign in'}</button>
             { 
                 isShowingModal && <AuthModal onClose={() => {showingModal(!isShowingModal)}}/>
             }
