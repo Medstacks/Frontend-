@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export interface User { 
     name: string,
     role: string
@@ -8,3 +10,8 @@ export interface AuthContextType {
   logout: () => void;
   isAuthenticated: boolean;
 }
+export type SupportCardProps = {
+  icon: ReactNode;
+  title: string;
+  text: string;
+};
