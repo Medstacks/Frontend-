@@ -31,7 +31,8 @@ button {
   }
 }
 .contact {
-  @apply bg-black text-white py-[20px] px-[20px] flex flex-col justify-center gap-3 items-center w-full md:w-[40%];
+  background-color: rgb(6, 8, 6);
+  @apply text-white py-[20px] px-[20px] flex flex-col justify-center gap-3 items-center w-full md:w-[40%];
   & main {
     @apply bg-white text-black rounded p-3 text-center;
     & section {

@@ -12,7 +12,7 @@ export default function Hero() {
                 <div
                     className="hero  inset-0 bg-cover bg-center bg-no-repeat h-full"
                     style={{
-                        backgroundImage: "url(/hero.jpg)",
+                        backgroundImage: "url(https://i.pinimg.com/736x/ac/1f/65/ac1f657fd8bb7ee744e678485745de63.jpg)",
                     }}
                     >
                     <motion.article
@@ -35,8 +35,8 @@ export default function Hero() {
                         >
                             Using Technology in Revolutionizing Agriculture
                         </motion.h1>
-                        <motion.p style={{ fontSize: '0.85rem' }}
-                            className="text-white max-w-md mt-4 leading-relaxed"
+                        <motion.p style={{ fontSize: '1rem' }}
+                            className="text-white max-w-[600px] mt-4 w-[80%] italic"
                             variants={fadeIn}
                         >
                             Helping smallholder farmers cut post-harvest losses through smart
