@@ -31,3 +31,30 @@ button{
   }
   
 }
+.contact{
+  @apply bg-black text-white py-[20px] px-[20px] flex flex-col justify-center gap-3 items-center w-full md:w-[40%];
+   & main{
+    @apply bg-white text-black rounded p-3 text-center;
+    & section{
+      display:flex;
+      gap:10px;
+      flex-direction: column;
+      @apply sm:px-[20px] py-[30px];
+    }
+   }
+   & footer{
+    display:flex;
+    @apply justify-center items-center;
+    & button{
+      width:100px;
+      padding:10px 5px;
+      @apply bg-white hover:bg-gray-400 text-black;
+    }
+   }
+   & input{
+    @apply w-[100%] h-[30px] p-1 bg-white text-gray-700 my-2 border-0 outline-0;
+   }
+   & textarea{
+    @apply resize-none  w-[100%] p-1 bg-white text-gray-700 my-2 border-0 outline-0;
+   }
+}

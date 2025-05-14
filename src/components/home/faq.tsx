@@ -30,7 +30,7 @@ export default function FAQ() {
         },
     ];
     return (
-         <section className="w-full max-w-4xl mx-auto py-4 px-4 md:px-6">
+         <section className="w-full md:w-1/2 mx-auto py-4 px-4 md:px-6 h-[300px]">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -64,7 +64,7 @@ export default function FAQ() {
                             <AccordionTrigger className="text-left text-brandBlack hover:text-brandGreen transition-colors py-[20px]">
                                 {faq.question}
                             </AccordionTrigger>
-                            <AccordionContent className="text-gray-600 shadow-md mt-[10px]">
+                            <AccordionContent className="text-gray-600 shadow-md">
                                 {faq.answer}
                             </AccordionContent>
                         </AccordionItem>
