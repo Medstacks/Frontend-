@@ -41,14 +41,14 @@ export default function Homepage() {
                         <button>Let's work together</button>
                     </main>
                     <div className='w-[90%] max-w-[450px] h-[250px] sm:h-[300px] rounded-md overflow-hidden mb-[20px] '>
-                        <img src="/hero.jpg" alt="" className="object-cover object-contain w-full h-full"/>
+                        <img src="https://i.pinimg.com/736x/2c/8b/25/2c8b25b72b029df0399e2637a2e6f8cb.jpg" alt="" className="object-cover object-contain w-full h-full"/>
                     </div>
                 </section>
                 <section className='mt-[30px]'>
                     <main className="flex flex-wrap justify-center items-center gap-[20px]">
                         { 
                             dataPack.map((data, index) => (
-                                <div key={index} style={{border:'1px solid rgb(205, 199, 199)'}} className={"p-4 w-[80%] max-w-[350px] rounded shadow-md bg-gray-200 " }>
+                                <div key={index} style={{border:'1px solid rgb(205, 199, 199)'}} className={"p-4 w-[80%] max-w-[350px] rounded shadow-md bg-amber-50 " }>
                                     <h3>{data.metrics}</h3>
                                     <h6 style={{fontWeight:'bold', fontSize:'1rem'}}>{data.header}</h6>
                                     <p>{ data.desc}</p>
@@ -64,8 +64,8 @@ export default function Homepage() {
         <>
             <Navbar />
             <Hero />
-            <Support />
             <ChooseUs />
+            <Support />
             <article className="flex flex-col md:flex-row w-full justify-center items-center py-[30px] md:pr-[5%] gap-2">
                 <FAQ />
                 <Contact />

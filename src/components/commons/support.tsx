@@ -56,7 +56,7 @@ export default function Support() {
     );
     const points = ['sustaiable', 'Innovative', 'global', 'Relaible', 'Effiient', 'Impactful', 'Adaptive', 'Collaborative', 'Visionary']
     return (
-        <motion.div className='p-2 bg-gray-200 py-[30px]' variants={fadeIn}>
+        <motion.div className='p-2 py-[30px]' variants={fadeIn} style={{backgroundColor:'rgb(248,244,244, 0.1)'}}>
             <motion.aside className='flex gap-[10px] items-start flex-col text-start pl-[20px] pt-[20px] sm:pl-[40px] md:pt-[40px]'  variants={{
                             hidden: { opacity: 0 },
                             visible: {
@@ -80,7 +80,7 @@ export default function Support() {
                     <motion.h4
                         variants={fadeIn}
                         style={{ fontFamily: 'Admiral' }}
-                        className='pb-[20px]' >
+                        className='pb-[20px] text-[#0f570d]' >
                         We are commited to Advancing Agriculture
                     </motion.h4>
                     <motion.div variants={fadeIn} className=' flex flex-wrap gap-[10px]'>
@@ -99,7 +99,7 @@ export default function Support() {
                 </main>
             </motion.aside>
             <main className="flex flex-col justify-center items-center ">
-                <h4 style={{ fontFamily: 'Admiral' }} >What we offer</h4>
+                <h4 style={{ fontFamily: 'Admiral',color:'#0f570d'}} >What we offer</h4>
                 <div className="overflow-hidden px-[20px] py-[20px] sm:w-[90%]">
                     <div className="flex gap-4 transition transform duration-500 ease-in-out">
                         {visibleCards.map((card, index) => (

@@ -19,7 +19,7 @@ export default function Navbar() {
                 <img src="/favicons/favicon.svg" loading="lazy" alt="logo" className={'object-contain w-full h-full'} />
                 <h6 style={{fontWeight:'600',fontFamily:'Admiral, san-serif'}}>Agrolink</h6>
             </article>
-            <button onClick={handleAuth} className='text-nowrap'>{isAuthenticated ? "Log out" : 'Sign in'}</button>
+            <button onClick={handleAuth} className='text-nowrap text-[#ffffff]'>{isAuthenticated ? "Log out" : 'Sign in'}</button>
             { 
                 isShowingModal && <AuthModal onClose={() => {showingModal(!isShowingModal)}}/>
             }
