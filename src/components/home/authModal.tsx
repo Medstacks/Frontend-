@@ -3,6 +3,7 @@ import { MdClose } from "react-icons/md";
 import '../../App.css'
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/authContext";
+import type { User } from "../../types";
 
 export default function AuthModal({ onClose }: { onClose: () => void }) {
     const navigate = useNavigate()
@@ -37,7 +38,8 @@ export default function AuthModal({ onClose }: { onClose: () => void }) {
                         <div className='flex w-full py-[10px] justify-center items-center'>
                             <button
                                 onClick={function () {
-                                    login()
+                                    const userData: User = { name: email, role: 'farmer' };
+                                    login(userData);
                                     navigate('/dashboard')
                                 }}
                                 style={{ color: 'white' }} className="w-[100px] h-[10px]">Sign {!isSigningIn ? 'Up' : 'In'}</button>

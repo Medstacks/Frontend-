@@ -1,6 +1,7 @@
+
 import { useState, type ReactNode } from "react";
 import { NotificationContext } from "./notificationContext";
-import { Notification } from "../types";
+import  type { Notification } from "../types";
 
 export default function NotificationProvider({ children }: { children: ReactNode }) {
     const [notifications, setNotifications] = useState<Notification[]>([]);
