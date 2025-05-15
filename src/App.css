@@ -78,44 +78,105 @@ button {
   @apply text-start;
 }
 
-.growthCard{
-  display:flex;
-  gap:15px;
+.growthCard {
+  display: flex;
+  gap: 15px;
   @apply shadow-md rounded py-2 px-[10px] sm:px-[20px] md:flex-row flex-col justify-center items-center;
-  &  main{
-    @apply md:p-[40px] p-[20px]
+  & main {
+    @apply md:p-[40px] p-[20px];
   }
-  & article{
+  & article {
     padding-block: 30px 0;
-    display :flex ;
-    gap:15px;
-    
-    & p{
+    display: flex;
+    gap: 15px;
+
+    & p {
       @apply text-black flex gap-[3px] items-center rounded;
       font-size: 0.8rem;
       padding: 5px 10px;
       border: 1px solid #b5b3b3;
-      font-family:sans-serif, Admiral;
+      font-family: sans-serif, Admiral;
     }
   }
 
-  & h5{
-    font-family:sans-serif, Admiral;
+  & h5 {
+    font-family: sans-serif, Admiral;
     font-weight: bold;
     font-size: 2rem;
-    text-align:start;
+    text-align: start;
     @apply max-w-[500px] w-[80%] py-4;
   }
-  & button{
+  & button {
     @apply w-[170px] h-[30px] text-nowrap text-center text-white;
   }
 }
-.overviewPanel{
+.overviewPanel {
   @apply items-start bg-white border-[1px] rounded-sm border-gray-100 shadow-sm flex-1 p-3;
-  & header{
-    @apply flex gap-2 shadow-sm;
-    & p{
-      @apply text-[0.9rem] p-[5px_10px] cursor-pointer;
+  & header {
+    @apply flex gap-2  p-2 border-b-[1px] border-gray-200 rounded;
+    & p {
+      @apply text-[0.9rem] py-1 cursor-pointer w-[120px]  transition-all transform duration-500;
     }
   }
+}
+.clustersSection {
+  @apply w-[100%] sm:w-[370px] border-[1px] border-gray-200 rounded;
+  & main {
+    @apply flex justify-around items-start py-2;
+  }
+  & nav {
+    @apply flex justify-between items-center px-1 py-1;
+    & h5 {
+      font-weight: 600;
+      font-size: large;
+      @apply text-[0.9rem] capitalize;
+    }
+    & p {
+      @apply text-[0.7rem] border-[1px] p-[1px_7px] text-center rounded-md bg-blue-100 border-gray-200;
+    }
+  }
+  & section{
+    & h6 {
+      @apply text-[0.8rem];
+    }
+    & p{
+      @apply text-[0.7rem] py-1;
+    }
+  }
+ 
+}
+.overviewBody{
+  & h6{
+    @apply font-bold text-[0.85rem];
+  }
+  & p{
+    @apply text-[0.7rem]
+  }
+}
+.buttonsPack{
+  @apply flex justify-center items-center gap-3 ;
+}
+.buttonsPack *{
+  @apply transition transform duration-300;
+}
+.buttonsPack > :first-child{
+  @apply text-green-800 bg-white border-gray-300 hover:bg-gray-200;
+}
+.buttonsPack > :last-child{
+  @apply text-black bg-white border-gray-300 hover:bg-red-300;
+}
+.ratings{
+  @apply flex justify-start items-start gap-3;
+  & section {
+    @apply flex gap-2 bg-gray-100 p-[3px_8px] text-center rounded;
+  }
+  & h3{
+    @apply font-[400] text-[0.75rem];
+  }
+  & a {
+    @apply text-[0.7rem];
+  }
+}
+.name{
+  @apply text-[1rem] sm:text-[1.2rem]
 }
