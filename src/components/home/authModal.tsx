@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { MdClose } from "react-icons/md";
 import '../../App.css'
+import { useNavigate } from "react-router-dom";
+
 export default function AuthModal({ onClose }: { onClose: () => void }) {
+    const navigate = useNavigate()
     const [isSigningIn, setSignIn] = useState<boolean>(false);
     function toggleSignUp() {
         setSignIn(!isSigningIn)
@@ -29,7 +32,9 @@ export default function AuthModal({ onClose }: { onClose: () => void }) {
                         <input type="password" placeholder="password" />
                         <input type="password" placeholder="Confirm password" className={`${isSigningIn?'hidden':''}`} />
                         <div className='flex w-full py-[10px] justify-center items-center'>
-                            <button style={{ color: 'white' }} className="w-[100px] h-[10px]">Sign { !isSigningIn?'Up':'In'}</button>
+                            <button
+                                onClick={function(){navigate('/dashboard') }}
+                                style={{ color: 'white' }} className="w-[100px] h-[10px]">Sign {!isSigningIn ? 'Up' : 'In'}</button>
                         </div>
                         <section className='w-full flex gap-[5px] justify-center items-center '>
                             <div className='h-[1px] bg-gray-200 w-full'></div>
