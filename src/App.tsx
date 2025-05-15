@@ -8,7 +8,7 @@ export default function App() {
     createRoutesFromElements(
       <Route>
         <Route element={<Homepage />} path='/' />
-        <Route element={<Dashboard/>} path='/dashbooard' />
+        <Route element={<Dashboard/>} path='/dashboard' />
       </Route>
     )
   )

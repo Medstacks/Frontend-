@@ -2,10 +2,13 @@ import { useEffect, useState } from "react";
 import { MdClose } from "react-icons/md";
 import '../../App.css'
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../hooks/authContext";
 
 export default function AuthModal({ onClose }: { onClose: () => void }) {
     const navigate = useNavigate()
-    const [isSigningIn, setSignIn] = useState<boolean>(false);
+    const { isAuthenticated, login } = useAuth()
+    const [email, setEmail] = useState<string>('')
+    const [isSigningIn, setSignIn] = useState<boolean>(isAuthenticated);
     function toggleSignUp() {
         setSignIn(!isSigningIn)
     }
@@ -28,12 +31,15 @@ export default function AuthModal({ onClose }: { onClose: () => void }) {
                 </section>
                 <section className='sectionBody'>
                     <form>
-                        <input type="text" placeholder="email" />
+                        <input type="text" placeholder="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
                         <input type="password" placeholder="password" />
                         <input type="password" placeholder="Confirm password" className={`${isSigningIn?'hidden':''}`} />
                         <div className='flex w-full py-[10px] justify-center items-center'>
                             <button
-                                onClick={function(){navigate('/dashboard') }}
+                                onClick={function () {
+                                    login()
+                                    navigate('/dashboard')
+                                }}
                                 style={{ color: 'white' }} className="w-[100px] h-[10px]">Sign {!isSigningIn ? 'Up' : 'In'}</button>
                         </div>
                         <section className='w-full flex gap-[5px] justify-center items-center '>
