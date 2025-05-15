@@ -65,11 +65,11 @@
 //         </div>
 //     );
 // }
-import { useEffect, useState } from "react";
-import { X } from "lucide-react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/authContext";
 import type { User } from "../../types";
+import { MdClose } from "react-icons/md";
 
 export default function AuthModal({ onClose }: { onClose: () => void }) {
     const navigate = useNavigate();
@@ -141,7 +141,7 @@ export default function AuthModal({ onClose }: { onClose: () => void }) {
                         {!isSigningIn ? 'Create Your Account' : 'Welcome Back'}
                     </p>
                     <button onClick={onClose} className="hover:text-red-400 p-2 rounded-full hover:bg-[#e4e0e0] cursor-pointer duration-300 transition-all">
-                        <X size={20} />
+                    <MdClose />
                     </button>
                 </header>
                 
