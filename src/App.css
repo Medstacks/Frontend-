@@ -120,7 +120,7 @@ button {
   }
 }
 .clustersSection {
-  @apply w-[100%] sm:w-[370px] border-[1px] border-gray-200 rounded;
+  @apply w-[100%] sm:w-[370px] md:w-[300px] border-[1px] border-gray-200 rounded;
   & main {
     @apply flex justify-around items-start py-2;
   }
@@ -179,4 +179,7 @@ button {
 }
 .name{
   @apply text-[1rem] sm:text-[1.2rem]
+}
+.assessments{
+  @apply p-[40px_17px] text-center text-[0.8rem] mt-[20px];
 }

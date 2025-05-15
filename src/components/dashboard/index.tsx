@@ -9,7 +9,14 @@ import "../../App.css"
 import type { Clusters, Logistics } from "../../types";
 
 export default function Dashboard() {
-    const [currentIndex, setCurrentIndex] = useState<number>(0)
+    const [currentIndex, setCurrentIndex] = useState<number>(0);
+    const EmptyCard = () => {
+        return (
+            <article className='assessments bg-white border-[1px] rounded  border-gray-100 '>
+                <p>No Data is Available Yet</p>
+            </article>
+        )
+    }
     const LeftPanel = () => {
         const menus = [
             {
@@ -68,7 +75,7 @@ export default function Dashboard() {
     const DashboardNavbar = () => {
         return (
             <nav className='py-[15px] flex flex-col text-start'>
-                <h5 style={{ fontWeight: 'bolder'}} className='text-green-900 name'>Welcome {user?.name}</h5>
+                <h5 style={{ fontWeight: 'bolder' }} className='text-green-900 name'>Welcome {user?.name}</h5>
                 <p>Manage Your Crops, logistics, preservations and recommendations</p>
             </nav>
         )
@@ -123,7 +130,7 @@ export default function Dashboard() {
         function OverviewBody({ styles }: { styles: string }) {
             return (
                 <div className='flex flex-col md:flex-row md:flex-wrap py-[20px] gap-4 px-3'>
-                    <section className={`${styles} text-start p-1 overviewBody max-w-[400px]`}>
+                    <section className={`${styles} text-start p-1 overviewBody lg:max-w-[400px] max-w-[300px]`}>
                         <h6>Harvest clusters</h6>
                         <p>Group of farmers with similar crops and harvest timelines</p>
                         <main className='flex flex-col gap-2 pt-[10px] '>
@@ -158,7 +165,7 @@ export default function Dashboard() {
                             }
                         </main>
                     </section>
-                    <section className={`${styles} overviewBody text-start px-2 py-2 bg-amber-50 border-[1px] border-gray-100 rounded`}>
+                    <section className={`${styles} overviewBody text-start px-2 py-2 bg-amber-50 border-[1px] border-gray-100 rounded max-w-[330px] `}>
                         <h6>Logistics Recommendations</h6>
                         <p>Smart matched transport and storage options for your harvest</p>
                         <main className='flex flex-col gap-2 pt-[10px] '>
@@ -202,6 +209,19 @@ export default function Dashboard() {
                             }
                         </main>
                     </section>
+                    <div className='flex flex-col md:flex-row lg:flex-col gap-4'>
+                        <section className={`${styles} text-start p-1 overviewBody max-w-[400px] h-[200px] border-[1px] rounded bg-gray-50 border-gray-100 p-4`}>
+                            <h6>Risk Assessment</h6>
+                            <p>AI-powered risk evaluation for your farming operations</p>
+                            <EmptyCard />
+                        </section>
+                        <section className={`${styles} text-start p-1 overviewBody max-w-[400px] h-[200px] border-[1px] rounded bg-gray-50 border-gray-100 p-4`}>
+                            <h6>Freshbox Recommendations</h6>
+                            <p>Smart preservation techniques for your crops</p>
+                            <EmptyCard />
+                        </section>
+                    </div>
+
                 </div>
 
             )
@@ -223,6 +243,7 @@ export default function Dashboard() {
                     <OverviewBody styles={index === 0 ? '' : 'hidden'} />
                     <RegisterCrops styles={index === 1 ? '' : 'hidden'} />
                 </main>
+
             </main>
         )
     }
