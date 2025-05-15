@@ -110,3 +110,12 @@ button {
     @apply w-[170px] h-[30px] text-nowrap text-center text-white;
   }
 }
+.overviewPanel{
+  @apply items-start bg-white border-[1px] rounded-sm border-gray-100 shadow-sm flex-1 p-3;
+  & header{
+    @apply flex gap-2 shadow-sm;
+    & p{
+      @apply text-[0.9rem] p-[5px_10px] cursor-pointer;
+    }
+  }
+}
