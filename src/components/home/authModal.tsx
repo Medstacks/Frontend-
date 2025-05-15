@@ -1,8 +1,14 @@
 import { useEffect, useState } from "react";
 import { MdClose } from "react-icons/md";
 import '../../App.css'
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../hooks/authContext";
+
 export default function AuthModal({ onClose }: { onClose: () => void }) {
-    const [isSigningIn, setSignIn] = useState<boolean>(false);
+    const navigate = useNavigate()
+    const { isAuthenticated, login } = useAuth()
+    const [email, setEmail] = useState<string>('')
+    const [isSigningIn, setSignIn] = useState<boolean>(isAuthenticated);
     function toggleSignUp() {
         setSignIn(!isSigningIn)
     }
@@ -11,7 +17,7 @@ export default function AuthModal({ onClose }: { onClose: () => void }) {
     }, [isSigningIn])
     return (
         <div className="fixed inset-0 z-20 flex justify-center items-center">
-            <aside className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}></aside>
+            {/* <aside className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}></aside> */}
             <main className="relative z-20 w-[90%] max-w-[350px] bg-white rounded-lg shadow-lg p-2">
                 <header className='flex justify-between w-full pl-[10px] items-center'>
                     <p style={{fontSize:'1.2rem'}} className='font-[600] py-[10px]'>{!isSigningIn ? 'Create Your Account' : 'Welcome Back'}</p>
@@ -25,11 +31,16 @@ export default function AuthModal({ onClose }: { onClose: () => void }) {
                 </section>
                 <section className='sectionBody'>
                     <form>
-                        <input type="text" placeholder="email" />
+                        <input type="text" placeholder="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
                         <input type="password" placeholder="password" />
                         <input type="password" placeholder="Confirm password" className={`${isSigningIn?'hidden':''}`} />
                         <div className='flex w-full py-[10px] justify-center items-center'>
-                            <button style={{ color: 'white' }} className="w-[100px] h-[10px]">Sign { !isSigningIn?'Up':'In'}</button>
+                            <button
+                                onClick={function () {
+                                    login()
+                                    navigate('/dashboard')
+                                }}
+                                style={{ color: 'white' }} className="w-[100px] h-[10px]">Sign {!isSigningIn ? 'Up' : 'In'}</button>
                         </div>
                         <section className='w-full flex gap-[5px] justify-center items-center '>
                             <div className='h-[1px] bg-gray-200 w-full'></div>

@@ -15,3 +15,14 @@ export type SupportCardProps = {
   title: string;
   text: string;
 };
+export interface Notification {
+  isRead: boolean,
+  text: string,
+  date: string,
+  id:number
+}
+export interface NotificationContextType { 
+  notifications: Notification[],
+  addNotification: (notification:Notification) => void,
+  readNotification: (id:number)=>void
+}
